@@ -1,0 +1,92 @@
+:root {
+  --primary: #0066b6;
+  --primary-light: #e982e7;
+  --primary-dark: #933c91;
+}
+
+.iti {
+  display: block !important;
+}
+
+.fade-in {
+  animation-name: FadeIn;
+  animation-duration: 0.9s;
+  transition-timing-function: linear;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+label.required::after {
+  content: "*";
+  color: red;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #0066b6;
+}
+
+::selection {
+  color: white;
+  background: #0066b6;
+}
+
+@media (max-width: 575.98px) {
+  label.required {
+    display: inline;
+  }
+  label.form-label {
+    display: inline;
+  }
+}
+
+.congrat-title {
+  font-family: fantasy;
+}
+
+
+
+
