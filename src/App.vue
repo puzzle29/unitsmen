@@ -15,4 +15,16 @@
 #app {
   font-family: "Helvetica Now Text", sans-serif;
 }
+
+.main {
+  margin-top: 44vh;
+}
+
+a:hover {
+  opacity: .5;
+}
+
+a {
+  text-decoration: none;
+}
 </style>

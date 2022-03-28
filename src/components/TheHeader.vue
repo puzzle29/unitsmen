@@ -35,10 +35,10 @@ export default {
 
 <style scoped>
 #background-video {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -48,7 +48,6 @@ export default {
 
 .title {
   margin-top: 48vh;
-  margin-bottom: 48vh;
   color: white;
   text-align: center;
   -webkit-text-stroke: 1px #938e8e;
@@ -89,8 +88,8 @@ export default {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #05e6cd,
+      0 0 40px #07d0a2, 0 0 50px #00e68d, 0 0 60px #00e6d1, 0 0 70px #00e698;
   }
 
   to {
@@ -101,39 +100,39 @@ export default {
 
 /*scroll*/
 
-.arrow{
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.arrow {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.arrow span{
-    display: block;
-    width: 25px;
-    height: 25px;
-    border-bottom: 3px solid #ffffff;
-    border-right: 3px solid #ffffff;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
+.arrow span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
 }
-.arrow span:nth-child(2){
-    animation-delay: -0.2s;
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
 }
-.arrow span:nth-child(3){
-    animation-delay: -0.4s;
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
 }
 @keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px,-20px);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px,20px);
-    }
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
 </style>
