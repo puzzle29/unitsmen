@@ -11,7 +11,9 @@
     </video>
     <the-navbar></the-navbar>
     <div class="title">
-      <h1 class="text-3d glow" id="curveText">One nation family</h1>
+      <h1 class="text-3d" id="curveText">
+        <span class="word">One nation</span> <span class="word">family</span>
+        </h1>
       <!-- <h2>La montre classique par excellence</h2> -->
     </div>
     <div class="arrow">
@@ -24,12 +26,35 @@
 
 <script>
 import TheNavbar from "../components/TheNavbar.vue";
+import anime from "animejs/lib/anime.es.js";
 
 export default {
   components: {
     TheNavbar,
   },
-  mounted() {},
+  mounted() {
+    document
+      .getElementById("curveText")
+      .addEventListener("mouseenter", function () {
+        document.getElementById("curveText").classList.add("glow");
+      });
+    document
+      .getElementById("curveText")
+      .addEventListener("mouseleave", function () {
+        document.getElementById("curveText").classList.remove("glow");
+      });
+
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: ".text-3d .word",
+        scale: [14, 1],
+        opacity: [0, 1],
+        easing: "easeOutCirc",
+        duration: 800,
+        delay: (el, i) => 800 * i,
+      });
+  },
 };
 </script>
 
@@ -46,8 +71,13 @@ export default {
   z-index: -1;
 }
 
+.word {
+  display: inline-block;
+  line-height: 1em;
+}
+
 .title {
-  margin-top: 48vh;
+  margin-top: 42vh;
   color: white;
   text-align: center;
   -webkit-text-stroke: 1px #938e8e;

@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav nav-pills nav-fill px-5 fixed-top">
+  <nav class="nav nav-pills nav-fill px-5">
     <button type="button" class="menu-button nav-link">
       <div id="hamburger">
         <span></span>
@@ -8,26 +8,30 @@
       <span class="ps-2">Menu</span>
     </button>
     <button type="button" class="second-button nav-link">
-      Much longer nav link
+      Voir tous les profils
     </button>
     <div class="nav-link">
-      <a href="#">
+      <!-- <a href="#">
         <img src="../assets/img/planete-terre-white.png" alt="" width="50" />
-      </a>
+      </a> -->
+      <span class="title"> Unitsmen </span>
     </div>
-    <button type="button" class="third-button nav-link">
-      Third link
-    </button>
+    <button type="button" class="third-button nav-link">A propos</button>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'TheNavbar'
-}
+  name: "TheNavbar",
+};
 </script>
 
 <style scoped>
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .nav-link {
   color: white;
 }
@@ -56,7 +60,6 @@ export default {
 }
 
 .second-button {
-
   display: flex;
   align-items: flex-end;
   align-self: flex-end;
@@ -65,12 +68,11 @@ export default {
 }
 
 .third-button {
-
   display: flex;
   align-items: flex-end;
   align-self: flex-end;
 
-  flex-direction: column-reverse
+  flex-direction: column-reverse;
 }
 
 button,
