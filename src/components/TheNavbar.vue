@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav nav-pills nav-fill px-5">
+  <nav class="nav nav-pills nav-fill px-5 desk-nav">
     <button type="button" class="menu-button nav-link">
       <div id="hamburger">
         <span></span>
@@ -11,12 +11,21 @@
       Voir tous les profils
     </button>
     <div class="nav-link">
-      <!-- <a href="#">
-        <img src="../assets/img/planete-terre-white.png" alt="" width="50" />
-      </a> -->
       <span class="title"> Unitsmen </span>
     </div>
     <button type="button" class="third-button nav-link">A propos</button>
+  </nav>
+  <nav class="nav nav-pills nav-fill px-5 mobile-nav">
+    <div class="nav-link">
+      <span class="title"> Unitsmen </span>
+    </div>
+    <button type="button" class="menu-button nav-link">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+      </div>
+      <span class="ps-2">Menu</span>
+    </button>
   </nav>
 </template>
 
@@ -63,8 +72,6 @@ export default {
   display: flex;
   align-items: flex-end;
   align-self: flex-end;
-
-  flex: 0 1 32rem;
 }
 
 .third-button {
@@ -85,4 +92,38 @@ textarea {
   line-height: 1.15;
   margin: 0px;
 }
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav .nav-link {
+  text-align: left;
+}
+
+@media (min-width: 1800px) {
+  .second-button {
+    flex: 0 1 32rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mobile-nav {
+    display: block;
+  }
+  .desk-nav {
+    display: none;
+  }
+
+  .mobile-nav .nav-link {
+  text-align: left;
+}
+}
+
+/* @media (min-width: 768px) {
+  .desk-nav {
+    display: block;
+  }
+} */
+
 </style>
