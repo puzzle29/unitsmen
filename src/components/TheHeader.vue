@@ -12,7 +12,8 @@
     <the-navbar></the-navbar>
     <div class="title">
       <h1 class="text-3d" id="curveText">
-        <span class="word">One</span> <span class="word">nation</span> <span class="word">family</span>
+        <span class="word">One</span> <span class="word">nation</span>
+        <span class="word">family</span>
       </h1>
       <!-- <h2>La montre classique par excellence</h2> -->
     </div>
@@ -162,6 +163,13 @@ export default {
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .title {
+    margin-top: 22vh;
   }
 }
 </style>

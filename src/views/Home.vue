@@ -506,4 +506,27 @@ export default {
 .event-list-bloc-parent {
   background-color: rgb(247, 247, 247);
 }
+
+@media (max-width: 767.98px) {
+  .profile .picture-wrapper,
+  .event .picture-wrapper {
+    height: 20rem;
+  }
+
+  .profile-list-bloc {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 10px;
+  }
+
+  .event-list-bloc {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-right: 10px;
+  }
+
+  .presentation-bloc .title {
+    font-size: 1.5rem;
+  }
+}
 </style>

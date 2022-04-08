@@ -1,5 +1,5 @@
 <template>
-  <footer class="bd-footer py-5 mt-5 bg-dark text-white">
+  <footer class="bd-footer py-5 bg-dark text-white">
   <div class="container py-5">
     <div class="row">
       <div class="col-lg-2 mb-3">
@@ -47,6 +47,6 @@ li a{
 }
 
 h5 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgb(255 255 255 / 69%);
 }
 </style>

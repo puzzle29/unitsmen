@@ -17,7 +17,7 @@
 }
 
 .main {
-  margin-top: 44vh;
+  margin-top: 36vh;
 }
 
 a:hover {
