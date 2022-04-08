@@ -12,8 +12,8 @@
     <the-navbar></the-navbar>
     <div class="title">
       <h1 class="text-3d" id="curveText">
-        <span class="word">One nation</span> <span class="word">family</span>
-        </h1>
+        <span class="word">One</span> <span class="word">nation</span> <span class="word">family</span>
+      </h1>
       <!-- <h2>La montre classique par excellence</h2> -->
     </div>
     <div class="arrow">
@@ -33,27 +33,26 @@ export default {
     TheNavbar,
   },
   mounted() {
-    document
-      .getElementById("curveText")
-      .addEventListener("mouseenter", function () {
-        document.getElementById("curveText").classList.add("glow");
-      });
-    document
-      .getElementById("curveText")
-      .addEventListener("mouseleave", function () {
-        document.getElementById("curveText").classList.remove("glow");
-      });
-
-    anime
-      .timeline({ loop: false })
-      .add({
-        targets: ".text-3d .word",
-        scale: [14, 1],
-        opacity: [0, 1],
-        easing: "easeOutCirc",
-        duration: 800,
-        delay: (el, i) => 800 * i,
-      });
+    anime.timeline({ loop: false }).add({
+      targets: ".text-3d .word",
+      scale: [14, 1],
+      opacity: [0, 1],
+      easing: "easeOutCirc",
+      duration: 1200,
+      delay: (el, i) => 1000 * i,
+      complete: function () {
+        document
+          .getElementById("curveText")
+          .addEventListener("mouseenter", function () {
+            document.getElementById("curveText").classList.add("glow");
+          });
+        document
+          .getElementById("curveText")
+          .addEventListener("mouseleave", function () {
+            document.getElementById("curveText").classList.remove("glow");
+          });
+      },
+    });
   },
 };
 </script>

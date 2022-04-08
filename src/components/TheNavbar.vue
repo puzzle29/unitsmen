@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav nav-pills nav-fill px-5 desk-nav">
+  <nav class="nav nav-pills nav-fill px-5 mt-3 desk-nav">
     <button type="button" class="menu-button nav-link">
       <div id="hamburger">
         <span></span>
@@ -7,15 +7,10 @@
       </div>
       <span class="ps-2">Menu</span>
     </button>
-    <button type="button" class="second-button nav-link">
-      Voir tous les profils
-    </button>
-    <div class="nav-link">
-      <span class="title"> Unitsmen </span>
-    </div>
-    <button type="button" class="third-button nav-link">A propos</button>
+    <button type="button" class="third-button nav-link">UNITSMEN</button>
   </nav>
-  <nav class="nav nav-pills nav-fill px-5 mobile-nav">
+
+  <nav class="nav nav-pills nav-fill px-5 mt-3 mobile-nav">
     <div class="nav-link">
       <span class="title"> Unitsmen </span>
     </div>
@@ -26,6 +21,18 @@
       </div>
       <span class="ps-2">Menu</span>
     </button>
+  </nav>
+
+  <nav
+    class="px-5"
+    style="--bs-breadcrumb-divider: '>'"
+    aria-label="breadcrumb"
+  >
+    <ol class="breadcrumb px-3">
+      <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+      <li class="breadcrumb-item"><a href="#">Profils</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Évènement</li>
+    </ol>
   </nav>
 </template>
 
@@ -101,6 +108,15 @@ textarea {
   text-align: left;
 }
 
+.breadcrumb a {
+  color: white;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+  font-weight: bold;
+}
+
 @media (min-width: 1800px) {
   .second-button {
     flex: 0 1 32rem;
@@ -116,8 +132,8 @@ textarea {
   }
 
   .mobile-nav .nav-link {
-  text-align: left;
-}
+    text-align: left;
+  }
 }
 
 /* @media (min-width: 768px) {
@@ -125,5 +141,4 @@ textarea {
     display: block;
   }
 } */
-
 </style>

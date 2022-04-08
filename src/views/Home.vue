@@ -29,7 +29,7 @@
     <div class="row profile-list-bloc-parent">
       <div class="profile-list-bloc">
         <p class="title">
-          <span>Profils Unitsmen</span>
+          <span>Profils</span>
           <span class="hyphen mx-2"></span>
           <a href="">Voir tout</a>
         </p>
@@ -178,7 +178,7 @@
     <div class="row event-list-bloc-parent">
       <div class="event-list-bloc">
         <p class="title text-end">
-          <span>Evènements Unitsmen</span>
+          <span>Evènements</span>
           <span class="hyphen mx-2"></span>
           <a href="">Voir tout</a>
         </p>
